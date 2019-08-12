@@ -1,1 +1,250 @@
-大大所多
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 ~
+$ cd D:\StudyCode\gitcode
+bash: cd: D:StudyCodegitcode: No such file or directory
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 ~
+$ cd D:\StudyCode
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode
+$ cd gitcode
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode/gitcode (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode/gitcode (master)
+$ touch .gitignore
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode/gitcode (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode/gitcode (master)
+$ git add .
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode/gitcode (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   .gitignore
+
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode/gitcode (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   .gitignore
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        app1/
+
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode/gitcode (master)
+$ git add .
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode/gitcode (master)
+$ git commit -m 'test add app2'
+[master db31cc8] test add app2
+ 2 files changed, 3 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 app1/app.txt
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode/gitcode (master)
+$ git branch login
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode/gitcode (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode/gitcode (master)
+$ git checkout login
+Switched to branch 'login'
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode/gitcode (login)
+$ touch login.html
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode/gitcode (login)
+$ git status
+On branch login
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        login.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode/gitcode (login)
+$ git add .
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode/gitcode (login)
+$ git commit -m 'check in login'
+[login 1a7ad86] check in login
+ 2 files changed, 11 insertions(+)
+ create mode 100644 login.html
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode/gitcode (login)
+$ git status
+On branch login
+nothing to commit, working tree clean
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode/gitcode (login)
+$ git checkout master
+Switched to branch 'master'
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode/gitcode (master)
+$ git checkout login
+Switched to branch 'login'
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode/gitcode (login)
+$ git checkout master
+Switched to branch 'master'
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode/gitcode (master)
+$ git marge login
+git: 'marge' is not a git command. See 'git --help'.
+
+The most similar command is
+        merge
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode/gitcode (master)
+$ git merge login
+Updating db31cc8..1a7ad86
+Fast-forward
+ index.html |  1 +
+ login.html | 10 ++++++++++
+ 2 files changed, 11 insertions(+)
+ create mode 100644 login.html
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode/gitcode (master)
+$ git remote
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode/gitcode (master)
+$ git remote add origin https://github.com/crazyjunjun/homework.git
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode/gitcode (master)
+$ git remote
+origin
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode/gitcode (master)
+$ git push -u origin master
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (16/16), 1.35 KiB | 345.00 KiB/s, done.
+Total 16 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/crazyjunjun/homework.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode/gitcode (master)
+$ touch README.md
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode/gitcode (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode/gitcode (master)
+$ git add .
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode/gitcode (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   README.md
+
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode/gitcode (master)
+$ git commit -m 'check in README.md'
+[master dd4cdf2] check in README.md
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode/gitcode (master)
+$ git push
+fatal: TaskCanceledException encountered.
+   已取消一个任务。
+Username for 'https://github.com': crazyjunjun
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 304 bytes | 304.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/crazyjunjun/homework.git
+   1a7ad86..dd4cdf2  master -> master
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode/gitcode (master)
+$
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d
+$ cd /c
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /c
+$ cd /Users
+bash: cd: /Users: No such file or directory
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /c
+$ cd /d
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d
+$ cd StudyCode
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode
+$ cd my-new-app
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode/my-new-app
+$ git clone https://github.com/crazyjunjun/homework.git
+Cloning into 'homework'...
+remote: Enumerating objects: 19, done.
+remote: Counting objects: 100% (19/19), done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 19 (delta 3), reused 19 (delta 3), pack-reused 0
+Unpacking objects: 100% (19/19), done.
+
+CrazyJJUNJUN@DESKTOP-HF0C2T9 MINGW64 /d/StudyCode/my-new-app
+$
